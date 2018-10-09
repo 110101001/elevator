@@ -11,12 +11,30 @@ unistd.h
 -
 stdio.h
 -
+pthread.h
+-
+stdlib.h
+-
 pipe.h
 /home/wupeicong/OS/ele/pipe.h
 ctrler.h
 /home/wupeicong/OS/ele/ctrler.h
+display.h
+/home/wupeicong/OS/ele/display.h
 
 /home/wupeicong/OS/ele/ctrler.h
+
+/home/wupeicong/OS/ele/display.c
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+pipe.h
+/home/wupeicong/OS/ele/pipe.h
+
+/home/wupeicong/OS/ele/display.h
 
 /home/wupeicong/OS/ele/ele.c
 unistd.h

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ele.dir/ctrler.c.o"
+  "CMakeFiles/ele.dir/display.c.o"
   "CMakeFiles/ele.dir/ele.c.o"
   "CMakeFiles/ele.dir/main.c.o"
   "CMakeFiles/ele.dir/pipe.c.o"

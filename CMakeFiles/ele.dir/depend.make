@@ -3,7 +3,11 @@
 
 CMakeFiles/ele.dir/ctrler.c.o: ctrler.c
 CMakeFiles/ele.dir/ctrler.c.o: ctrler.h
+CMakeFiles/ele.dir/ctrler.c.o: display.h
 CMakeFiles/ele.dir/ctrler.c.o: pipe.h
+
+CMakeFiles/ele.dir/display.c.o: display.c
+CMakeFiles/ele.dir/display.c.o: pipe.h
 
 CMakeFiles/ele.dir/ele.c.o: ele.c
 

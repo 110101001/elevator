@@ -150,6 +150,33 @@ ctrler.c.s:
 	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/ctrler.c.s
 .PHONY : ctrler.c.s
 
+display.o: display.c.o
+
+.PHONY : display.o
+
+# target to build an object file
+display.c.o:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/display.c.o
+.PHONY : display.c.o
+
+display.i: display.c.i
+
+.PHONY : display.i
+
+# target to preprocess a source file
+display.c.i:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/display.c.i
+.PHONY : display.c.i
+
+display.s: display.c.s
+
+.PHONY : display.s
+
+# target to generate assembly for a file
+display.c.s:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/display.c.s
+.PHONY : display.c.s
+
 ele.o: ele.c.o
 
 .PHONY : ele.o
@@ -297,6 +324,9 @@ help:
 	@echo "... ctrler.o"
 	@echo "... ctrler.i"
 	@echo "... ctrler.s"
+	@echo "... display.o"
+	@echo "... display.i"
+	@echo "... display.s"
 	@echo "... ele.o"
 	@echo "... ele.i"
 	@echo "... ele.s"

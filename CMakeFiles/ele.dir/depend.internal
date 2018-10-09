@@ -4,6 +4,10 @@
 CMakeFiles/ele.dir/ctrler.c.o
  /home/wupeicong/OS/ele/ctrler.c
  /home/wupeicong/OS/ele/ctrler.h
+ /home/wupeicong/OS/ele/display.h
+ /home/wupeicong/OS/ele/pipe.h
+CMakeFiles/ele.dir/display.c.o
+ /home/wupeicong/OS/ele/display.c
  /home/wupeicong/OS/ele/pipe.h
 CMakeFiles/ele.dir/ele.c.o
  /home/wupeicong/OS/ele/ele.c

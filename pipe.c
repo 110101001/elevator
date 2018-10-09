@@ -12,13 +12,13 @@ int pipe_init(){
 }
 
 //send msg 
-void pipe_send(int *fd,byte *data,int len){
-    close(fd[0]);
-    write(fd[1],data,len);
+void pipe_send(int sender,byte *data,int len){
+    close(pipe_fd[sender][0]);
+    write(pipe_fd[sender][1],data,len);
 }
 //recv msg
-int pipe_recv(int *fd,byte *data,int len){
-    close(fd[1]);
-    return read(fd[0],data,len);
+int pipe_recv(int sender,byte *data,int len){
+    close(pipe_fd[sender][1]);
+    return read(pipe_fd[sender][0],data,len);
 }
 
