@@ -5,11 +5,13 @@
 
 int floor_main_loop(int floor){
     printf("floormainloop %d \n",floor);
+    exit(0);
     return 0;
 }
 
 int electl_main_loop(){
     printf("electrlmainloop\n");
+    exit(0);
     return 0;
 }
 

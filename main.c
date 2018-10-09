@@ -3,6 +3,7 @@
 
 #include"pipe.h"
 #include"ctrler.h"
+#include"process.h"
 
 int main(){
 
