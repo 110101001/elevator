@@ -5,12 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/wupeicong/OS/ele/ctrler.c" "/home/wupeicong/OS/ele/CMakeFiles/ele.dir/ctrler.c.o"
-  "/home/wupeicong/OS/ele/display.c" "/home/wupeicong/OS/ele/CMakeFiles/ele.dir/display.c.o"
   "/home/wupeicong/OS/ele/ele.c" "/home/wupeicong/OS/ele/CMakeFiles/ele.dir/ele.c.o"
   "/home/wupeicong/OS/ele/main.c" "/home/wupeicong/OS/ele/CMakeFiles/ele.dir/main.c.o"
   "/home/wupeicong/OS/ele/pipe.c" "/home/wupeicong/OS/ele/CMakeFiles/ele.dir/pipe.c.o"
   "/home/wupeicong/OS/ele/process.c" "/home/wupeicong/OS/ele/CMakeFiles/ele.dir/process.c.o"
   "/home/wupeicong/OS/ele/schedule.c" "/home/wupeicong/OS/ele/CMakeFiles/ele.dir/schedule.c.o"
+  "/home/wupeicong/OS/ele/smemory.c" "/home/wupeicong/OS/ele/CMakeFiles/ele.dir/smemory.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

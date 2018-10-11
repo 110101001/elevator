@@ -15,38 +15,28 @@ pthread.h
 -
 stdlib.h
 -
-pipe.h
-/home/wupeicong/OS/ele/pipe.h
+smemory.h
+/home/wupeicong/OS/ele/smemory.h
 ctrler.h
 /home/wupeicong/OS/ele/ctrler.h
-display.h
-/home/wupeicong/OS/ele/display.h
 
 /home/wupeicong/OS/ele/ctrler.h
-
-/home/wupeicong/OS/ele/display.c
-stdio.h
--
-unistd.h
--
-stdlib.h
--
-pipe.h
-/home/wupeicong/OS/ele/pipe.h
-
-/home/wupeicong/OS/ele/display.h
 
 /home/wupeicong/OS/ele/ele.c
 unistd.h
 -
+stdio.h
+-
+pipe.h
+/home/wupeicong/OS/ele/pipe.h
 
 /home/wupeicong/OS/ele/main.c
 stdio.h
 -
 unistd.h
 -
-pipe.h
-/home/wupeicong/OS/ele/pipe.h
+smemory.h
+/home/wupeicong/OS/ele/smemory.h
 ctrler.h
 /home/wupeicong/OS/ele/ctrler.h
 process.h
@@ -75,4 +65,22 @@ process.h
 /home/wupeicong/OS/ele/process.h
 
 /home/wupeicong/OS/ele/schedule.c
+
+/home/wupeicong/OS/ele/smemory.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+sys/ipc.h
+-
+sys/types.h
+-
+sys/shm.h
+-
+smemory.h
+/home/wupeicong/OS/ele/smemory.h
+
+/home/wupeicong/OS/ele/smemory.h
 

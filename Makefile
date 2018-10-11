@@ -150,33 +150,6 @@ ctrler.c.s:
 	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/ctrler.c.s
 .PHONY : ctrler.c.s
 
-display.o: display.c.o
-
-.PHONY : display.o
-
-# target to build an object file
-display.c.o:
-	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/display.c.o
-.PHONY : display.c.o
-
-display.i: display.c.i
-
-.PHONY : display.i
-
-# target to preprocess a source file
-display.c.i:
-	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/display.c.i
-.PHONY : display.c.i
-
-display.s: display.c.s
-
-.PHONY : display.s
-
-# target to generate assembly for a file
-display.c.s:
-	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/display.c.s
-.PHONY : display.c.s
-
 ele.o: ele.c.o
 
 .PHONY : ele.o
@@ -312,6 +285,33 @@ schedule.c.s:
 	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/schedule.c.s
 .PHONY : schedule.c.s
 
+smemory.o: smemory.c.o
+
+.PHONY : smemory.o
+
+# target to build an object file
+smemory.c.o:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/smemory.c.o
+.PHONY : smemory.c.o
+
+smemory.i: smemory.c.i
+
+.PHONY : smemory.i
+
+# target to preprocess a source file
+smemory.c.i:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/smemory.c.i
+.PHONY : smemory.c.i
+
+smemory.s: smemory.c.s
+
+.PHONY : smemory.s
+
+# target to generate assembly for a file
+smemory.c.s:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/smemory.c.s
+.PHONY : smemory.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -324,9 +324,6 @@ help:
 	@echo "... ctrler.o"
 	@echo "... ctrler.i"
 	@echo "... ctrler.s"
-	@echo "... display.o"
-	@echo "... display.i"
-	@echo "... display.s"
 	@echo "... ele.o"
 	@echo "... ele.i"
 	@echo "... ele.s"
@@ -342,6 +339,9 @@ help:
 	@echo "... schedule.o"
 	@echo "... schedule.i"
 	@echo "... schedule.s"
+	@echo "... smemory.o"
+	@echo "... smemory.i"
+	@echo "... smemory.s"
 .PHONY : help
 
 

@@ -81,33 +81,9 @@ CMakeFiles/ele.dir/ctrler.c.o.provides: CMakeFiles/ele.dir/ctrler.c.o.requires
 CMakeFiles/ele.dir/ctrler.c.o.provides.build: CMakeFiles/ele.dir/ctrler.c.o
 
 
-CMakeFiles/ele.dir/display.c.o: CMakeFiles/ele.dir/flags.make
-CMakeFiles/ele.dir/display.c.o: display.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ele.dir/display.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/display.c.o   -c /home/wupeicong/OS/ele/display.c
-
-CMakeFiles/ele.dir/display.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ele.dir/display.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wupeicong/OS/ele/display.c > CMakeFiles/ele.dir/display.c.i
-
-CMakeFiles/ele.dir/display.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ele.dir/display.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wupeicong/OS/ele/display.c -o CMakeFiles/ele.dir/display.c.s
-
-CMakeFiles/ele.dir/display.c.o.requires:
-
-.PHONY : CMakeFiles/ele.dir/display.c.o.requires
-
-CMakeFiles/ele.dir/display.c.o.provides: CMakeFiles/ele.dir/display.c.o.requires
-	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/display.c.o.provides.build
-.PHONY : CMakeFiles/ele.dir/display.c.o.provides
-
-CMakeFiles/ele.dir/display.c.o.provides.build: CMakeFiles/ele.dir/display.c.o
-
-
 CMakeFiles/ele.dir/ele.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/ele.c.o: ele.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ele.dir/ele.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ele.dir/ele.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/ele.c.o   -c /home/wupeicong/OS/ele/ele.c
 
 CMakeFiles/ele.dir/ele.c.i: cmake_force
@@ -131,7 +107,7 @@ CMakeFiles/ele.dir/ele.c.o.provides.build: CMakeFiles/ele.dir/ele.c.o
 
 CMakeFiles/ele.dir/main.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/main.c.o: main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ele.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ele.dir/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/main.c.o   -c /home/wupeicong/OS/ele/main.c
 
 CMakeFiles/ele.dir/main.c.i: cmake_force
@@ -155,7 +131,7 @@ CMakeFiles/ele.dir/main.c.o.provides.build: CMakeFiles/ele.dir/main.c.o
 
 CMakeFiles/ele.dir/pipe.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/pipe.c.o: pipe.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ele.dir/pipe.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ele.dir/pipe.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/pipe.c.o   -c /home/wupeicong/OS/ele/pipe.c
 
 CMakeFiles/ele.dir/pipe.c.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/ele.dir/pipe.c.o.provides.build: CMakeFiles/ele.dir/pipe.c.o
 
 CMakeFiles/ele.dir/process.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/process.c.o: process.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ele.dir/process.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ele.dir/process.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/process.c.o   -c /home/wupeicong/OS/ele/process.c
 
 CMakeFiles/ele.dir/process.c.i: cmake_force
@@ -203,7 +179,7 @@ CMakeFiles/ele.dir/process.c.o.provides.build: CMakeFiles/ele.dir/process.c.o
 
 CMakeFiles/ele.dir/schedule.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/schedule.c.o: schedule.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ele.dir/schedule.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ele.dir/schedule.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/schedule.c.o   -c /home/wupeicong/OS/ele/schedule.c
 
 CMakeFiles/ele.dir/schedule.c.i: cmake_force
@@ -225,26 +201,50 @@ CMakeFiles/ele.dir/schedule.c.o.provides: CMakeFiles/ele.dir/schedule.c.o.requir
 CMakeFiles/ele.dir/schedule.c.o.provides.build: CMakeFiles/ele.dir/schedule.c.o
 
 
+CMakeFiles/ele.dir/smemory.c.o: CMakeFiles/ele.dir/flags.make
+CMakeFiles/ele.dir/smemory.c.o: smemory.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ele.dir/smemory.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/smemory.c.o   -c /home/wupeicong/OS/ele/smemory.c
+
+CMakeFiles/ele.dir/smemory.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ele.dir/smemory.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wupeicong/OS/ele/smemory.c > CMakeFiles/ele.dir/smemory.c.i
+
+CMakeFiles/ele.dir/smemory.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ele.dir/smemory.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wupeicong/OS/ele/smemory.c -o CMakeFiles/ele.dir/smemory.c.s
+
+CMakeFiles/ele.dir/smemory.c.o.requires:
+
+.PHONY : CMakeFiles/ele.dir/smemory.c.o.requires
+
+CMakeFiles/ele.dir/smemory.c.o.provides: CMakeFiles/ele.dir/smemory.c.o.requires
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/smemory.c.o.provides.build
+.PHONY : CMakeFiles/ele.dir/smemory.c.o.provides
+
+CMakeFiles/ele.dir/smemory.c.o.provides.build: CMakeFiles/ele.dir/smemory.c.o
+
+
 # Object files for target ele
 ele_OBJECTS = \
 "CMakeFiles/ele.dir/ctrler.c.o" \
-"CMakeFiles/ele.dir/display.c.o" \
 "CMakeFiles/ele.dir/ele.c.o" \
 "CMakeFiles/ele.dir/main.c.o" \
 "CMakeFiles/ele.dir/pipe.c.o" \
 "CMakeFiles/ele.dir/process.c.o" \
-"CMakeFiles/ele.dir/schedule.c.o"
+"CMakeFiles/ele.dir/schedule.c.o" \
+"CMakeFiles/ele.dir/smemory.c.o"
 
 # External object files for target ele
 ele_EXTERNAL_OBJECTS =
 
 ele: CMakeFiles/ele.dir/ctrler.c.o
-ele: CMakeFiles/ele.dir/display.c.o
 ele: CMakeFiles/ele.dir/ele.c.o
 ele: CMakeFiles/ele.dir/main.c.o
 ele: CMakeFiles/ele.dir/pipe.c.o
 ele: CMakeFiles/ele.dir/process.c.o
 ele: CMakeFiles/ele.dir/schedule.c.o
+ele: CMakeFiles/ele.dir/smemory.c.o
 ele: CMakeFiles/ele.dir/build.make
 ele: CMakeFiles/ele.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable ele"
@@ -256,12 +256,12 @@ CMakeFiles/ele.dir/build: ele
 .PHONY : CMakeFiles/ele.dir/build
 
 CMakeFiles/ele.dir/requires: CMakeFiles/ele.dir/ctrler.c.o.requires
-CMakeFiles/ele.dir/requires: CMakeFiles/ele.dir/display.c.o.requires
 CMakeFiles/ele.dir/requires: CMakeFiles/ele.dir/ele.c.o.requires
 CMakeFiles/ele.dir/requires: CMakeFiles/ele.dir/main.c.o.requires
 CMakeFiles/ele.dir/requires: CMakeFiles/ele.dir/pipe.c.o.requires
 CMakeFiles/ele.dir/requires: CMakeFiles/ele.dir/process.c.o.requires
 CMakeFiles/ele.dir/requires: CMakeFiles/ele.dir/schedule.c.o.requires
+CMakeFiles/ele.dir/requires: CMakeFiles/ele.dir/smemory.c.o.requires
 
 .PHONY : CMakeFiles/ele.dir/requires
 

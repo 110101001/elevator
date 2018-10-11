@@ -4,18 +4,15 @@
 CMakeFiles/ele.dir/ctrler.c.o
  /home/wupeicong/OS/ele/ctrler.c
  /home/wupeicong/OS/ele/ctrler.h
- /home/wupeicong/OS/ele/display.h
- /home/wupeicong/OS/ele/pipe.h
-CMakeFiles/ele.dir/display.c.o
- /home/wupeicong/OS/ele/display.c
- /home/wupeicong/OS/ele/pipe.h
+ /home/wupeicong/OS/ele/smemory.h
 CMakeFiles/ele.dir/ele.c.o
  /home/wupeicong/OS/ele/ele.c
+ /home/wupeicong/OS/ele/pipe.h
 CMakeFiles/ele.dir/main.c.o
  /home/wupeicong/OS/ele/ctrler.h
  /home/wupeicong/OS/ele/main.c
- /home/wupeicong/OS/ele/pipe.h
  /home/wupeicong/OS/ele/process.h
+ /home/wupeicong/OS/ele/smemory.h
 CMakeFiles/ele.dir/pipe.c.o
  /home/wupeicong/OS/ele/pipe.c
  /home/wupeicong/OS/ele/pipe.h
@@ -26,3 +23,6 @@ CMakeFiles/ele.dir/process.c.o
  /home/wupeicong/OS/ele/process.h
 CMakeFiles/ele.dir/schedule.c.o
  /home/wupeicong/OS/ele/schedule.c
+CMakeFiles/ele.dir/smemory.c.o
+ /home/wupeicong/OS/ele/smemory.c
+ /home/wupeicong/OS/ele/smemory.h

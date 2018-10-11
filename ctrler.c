@@ -3,23 +3,38 @@
 #include<pthread.h>
 #include<stdlib.h>
 
-#include"pipe.h"
+#include"smemory.h"
 #include"ctrler.h"
-#include"display.h"
 
 int self; 
 
-void floor_op_loop(){
-    printf("Floor %d op init at pid:%d\n",self,getpid());
-    sleep(1);
-    exit(0);
+extern byte *shmaddr;
+
+void floor_display_loop(){
+    printf("Floor display %d init at pid:%d\n",self,getpid());
+    pthread_exit(0);
 }
 
+void electl_display_loop(){
+    byte buf[9];
+    printf("Ele display init at pid:%d\n",getpid());
+    shm_read(shmaddr,buf,9);
+    printf("%s\n",buf);
+    sleep(1);
+    pthread_exit(0);
+}
+
+void floor_op_loop(){
+    printf("Floor op %d init at pid:%d\n",self,getpid());
+    sleep(1);
+    pthread_exit(0);
+}
 
 void electl_op_loop(){
     printf("Ele op init at pid:%d\n",getpid());
+    shm_write(shmaddr,"goodday!",9);
     sleep(1);
-    exit(0);
+    pthread_exit(0);
 }
 
 int floor_main_loop(int floor){
