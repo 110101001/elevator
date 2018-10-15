@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.9.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/Cellar/cmake/3.9.1/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wupeicong/OS/ele
+CMAKE_SOURCE_DIR = /Users/wupeicong/Desktop/elevator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wupeicong/OS/ele
+CMAKE_BINARY_DIR = /Users/wupeicong/Desktop/elevator
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ele.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ele.dir/flags.make
 
 CMakeFiles/ele.dir/ctrler.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/ctrler.c.o: ctrler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ele.dir/ctrler.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/ctrler.c.o   -c /home/wupeicong/OS/ele/ctrler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wupeicong/Desktop/elevator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ele.dir/ctrler.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/ctrler.c.o   -c /Users/wupeicong/Desktop/elevator/ctrler.c
 
 CMakeFiles/ele.dir/ctrler.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ele.dir/ctrler.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wupeicong/OS/ele/ctrler.c > CMakeFiles/ele.dir/ctrler.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wupeicong/Desktop/elevator/ctrler.c > CMakeFiles/ele.dir/ctrler.c.i
 
 CMakeFiles/ele.dir/ctrler.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ele.dir/ctrler.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wupeicong/OS/ele/ctrler.c -o CMakeFiles/ele.dir/ctrler.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wupeicong/Desktop/elevator/ctrler.c -o CMakeFiles/ele.dir/ctrler.c.s
 
 CMakeFiles/ele.dir/ctrler.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ele.dir/ctrler.c.o.provides.build: CMakeFiles/ele.dir/ctrler.c.o
 
 CMakeFiles/ele.dir/ele.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/ele.c.o: ele.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ele.dir/ele.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/ele.c.o   -c /home/wupeicong/OS/ele/ele.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wupeicong/Desktop/elevator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ele.dir/ele.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/ele.c.o   -c /Users/wupeicong/Desktop/elevator/ele.c
 
 CMakeFiles/ele.dir/ele.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ele.dir/ele.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wupeicong/OS/ele/ele.c > CMakeFiles/ele.dir/ele.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wupeicong/Desktop/elevator/ele.c > CMakeFiles/ele.dir/ele.c.i
 
 CMakeFiles/ele.dir/ele.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ele.dir/ele.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wupeicong/OS/ele/ele.c -o CMakeFiles/ele.dir/ele.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wupeicong/Desktop/elevator/ele.c -o CMakeFiles/ele.dir/ele.c.s
 
 CMakeFiles/ele.dir/ele.c.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/ele.dir/ele.c.o.provides.build: CMakeFiles/ele.dir/ele.c.o
 
 CMakeFiles/ele.dir/main.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/main.c.o: main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ele.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/main.c.o   -c /home/wupeicong/OS/ele/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wupeicong/Desktop/elevator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ele.dir/main.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/main.c.o   -c /Users/wupeicong/Desktop/elevator/main.c
 
 CMakeFiles/ele.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ele.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wupeicong/OS/ele/main.c > CMakeFiles/ele.dir/main.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wupeicong/Desktop/elevator/main.c > CMakeFiles/ele.dir/main.c.i
 
 CMakeFiles/ele.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ele.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wupeicong/OS/ele/main.c -o CMakeFiles/ele.dir/main.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wupeicong/Desktop/elevator/main.c -o CMakeFiles/ele.dir/main.c.s
 
 CMakeFiles/ele.dir/main.c.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/ele.dir/main.c.o.provides.build: CMakeFiles/ele.dir/main.c.o
 
 CMakeFiles/ele.dir/pipe.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/pipe.c.o: pipe.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ele.dir/pipe.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/pipe.c.o   -c /home/wupeicong/OS/ele/pipe.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wupeicong/Desktop/elevator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ele.dir/pipe.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/pipe.c.o   -c /Users/wupeicong/Desktop/elevator/pipe.c
 
 CMakeFiles/ele.dir/pipe.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ele.dir/pipe.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wupeicong/OS/ele/pipe.c > CMakeFiles/ele.dir/pipe.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wupeicong/Desktop/elevator/pipe.c > CMakeFiles/ele.dir/pipe.c.i
 
 CMakeFiles/ele.dir/pipe.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ele.dir/pipe.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wupeicong/OS/ele/pipe.c -o CMakeFiles/ele.dir/pipe.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wupeicong/Desktop/elevator/pipe.c -o CMakeFiles/ele.dir/pipe.c.s
 
 CMakeFiles/ele.dir/pipe.c.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/ele.dir/pipe.c.o.provides.build: CMakeFiles/ele.dir/pipe.c.o
 
 CMakeFiles/ele.dir/process.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/process.c.o: process.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ele.dir/process.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/process.c.o   -c /home/wupeicong/OS/ele/process.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wupeicong/Desktop/elevator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ele.dir/process.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/process.c.o   -c /Users/wupeicong/Desktop/elevator/process.c
 
 CMakeFiles/ele.dir/process.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ele.dir/process.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wupeicong/OS/ele/process.c > CMakeFiles/ele.dir/process.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wupeicong/Desktop/elevator/process.c > CMakeFiles/ele.dir/process.c.i
 
 CMakeFiles/ele.dir/process.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ele.dir/process.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wupeicong/OS/ele/process.c -o CMakeFiles/ele.dir/process.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wupeicong/Desktop/elevator/process.c -o CMakeFiles/ele.dir/process.c.s
 
 CMakeFiles/ele.dir/process.c.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/ele.dir/process.c.o.provides.build: CMakeFiles/ele.dir/process.c.o
 
 CMakeFiles/ele.dir/schedule.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/schedule.c.o: schedule.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ele.dir/schedule.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/schedule.c.o   -c /home/wupeicong/OS/ele/schedule.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wupeicong/Desktop/elevator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ele.dir/schedule.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/schedule.c.o   -c /Users/wupeicong/Desktop/elevator/schedule.c
 
 CMakeFiles/ele.dir/schedule.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ele.dir/schedule.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wupeicong/OS/ele/schedule.c > CMakeFiles/ele.dir/schedule.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wupeicong/Desktop/elevator/schedule.c > CMakeFiles/ele.dir/schedule.c.i
 
 CMakeFiles/ele.dir/schedule.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ele.dir/schedule.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wupeicong/OS/ele/schedule.c -o CMakeFiles/ele.dir/schedule.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wupeicong/Desktop/elevator/schedule.c -o CMakeFiles/ele.dir/schedule.c.s
 
 CMakeFiles/ele.dir/schedule.c.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/ele.dir/schedule.c.o.provides.build: CMakeFiles/ele.dir/schedule.c.o
 
 CMakeFiles/ele.dir/smemory.c.o: CMakeFiles/ele.dir/flags.make
 CMakeFiles/ele.dir/smemory.c.o: smemory.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ele.dir/smemory.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/smemory.c.o   -c /home/wupeicong/OS/ele/smemory.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wupeicong/Desktop/elevator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ele.dir/smemory.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ele.dir/smemory.c.o   -c /Users/wupeicong/Desktop/elevator/smemory.c
 
 CMakeFiles/ele.dir/smemory.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ele.dir/smemory.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wupeicong/OS/ele/smemory.c > CMakeFiles/ele.dir/smemory.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wupeicong/Desktop/elevator/smemory.c > CMakeFiles/ele.dir/smemory.c.i
 
 CMakeFiles/ele.dir/smemory.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ele.dir/smemory.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wupeicong/OS/ele/smemory.c -o CMakeFiles/ele.dir/smemory.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wupeicong/Desktop/elevator/smemory.c -o CMakeFiles/ele.dir/smemory.c.s
 
 CMakeFiles/ele.dir/smemory.c.o.requires:
 
@@ -247,7 +247,7 @@ ele: CMakeFiles/ele.dir/schedule.c.o
 ele: CMakeFiles/ele.dir/smemory.c.o
 ele: CMakeFiles/ele.dir/build.make
 ele: CMakeFiles/ele.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wupeicong/OS/ele/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable ele"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wupeicong/Desktop/elevator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable ele"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ele.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -270,6 +270,6 @@ CMakeFiles/ele.dir/clean:
 .PHONY : CMakeFiles/ele.dir/clean
 
 CMakeFiles/ele.dir/depend:
-	cd /home/wupeicong/OS/ele && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wupeicong/OS/ele /home/wupeicong/OS/ele /home/wupeicong/OS/ele /home/wupeicong/OS/ele /home/wupeicong/OS/ele/CMakeFiles/ele.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/wupeicong/Desktop/elevator && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/wupeicong/Desktop/elevator /Users/wupeicong/Desktop/elevator /Users/wupeicong/Desktop/elevator /Users/wupeicong/Desktop/elevator /Users/wupeicong/Desktop/elevator/CMakeFiles/ele.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ele.dir/depend
 
