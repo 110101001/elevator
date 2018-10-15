@@ -7,9 +7,12 @@
 
 extern byte *shmaddr;
 
+
 int main(){
     shm_init();
-    
+
+    shm_test();
+
     create_process();
 
     ele_main_loop();

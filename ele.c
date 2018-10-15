@@ -4,5 +4,4 @@
 
 void ele_main_loop(){
     printf("Ele init at pid:%d\n",getpid());
-    fflush(stdout);
 }

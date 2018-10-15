@@ -17,19 +17,16 @@ void floor_display_loop(){
 
 void electl_display_loop(){
     printf("Ele display init at pid:%d\n",getpid());
-    sleep(1);
     pthread_exit(0);
 }
 
 void floor_op_loop(){
     printf("Floor op %d init at pid:%d\n",self,getpid());
-    sleep(1);
     pthread_exit(0);
 }
 
 void electl_op_loop(){
     printf("Ele op init at pid:%d\n",getpid());
-    sleep(1);
     pthread_exit(0);
 }
 

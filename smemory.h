@@ -17,4 +17,6 @@ void shm_write();
 
 void shm_read();
 
+void shm_test();
+
 #endif
