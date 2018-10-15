@@ -16,10 +16,7 @@ void floor_display_loop(){
 }
 
 void electl_display_loop(){
-    byte buf[9];
     printf("Ele display init at pid:%d\n",getpid());
-    shm_read(shmaddr,buf,9);
-    printf("%s\n",buf);
     sleep(1);
     pthread_exit(0);
 }
@@ -32,7 +29,6 @@ void floor_op_loop(){
 
 void electl_op_loop(){
     printf("Ele op init at pid:%d\n",getpid());
-    shm_write(shmaddr,"goodday!",9);
     sleep(1);
     pthread_exit(0);
 }
