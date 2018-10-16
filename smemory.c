@@ -4,7 +4,9 @@
 #include<sys/ipc.h>
 #include<sys/types.h>
 #include<sys/shm.h>
+#include<sys/sem.h>
 #include<errno.h>
+#include"ele.h"
 #include"smemory.h"
 /*
 shm_write(地址（基址变量名叫shmaddr），数据指针，数据长度)；
@@ -13,25 +15,37 @@ shm_read(地址（基址变量名叫shmaddr），数据指针，数据长度)；
 int shmid=0;
 int semid=0;
 byte *shmaddr;
+state *stateaddr;
+ele_task *ele_task_addr;
+floor_task *floor_task_addr;
 
 extern int errno;
 
 static void P(int semid){
-    struct Sembuf sembuf={0,-1,0};
-    semop(semid,sembuf, 1);
+    struct sembuf Sembuf={0,-1,0};
+    semop(semid,&Sembuf, 1);
 }
 
 static void V(int semid){
-    struct Sembuf sembuf={0,1,0};
-    semop(semid,sembuf, 1);
+    struct sembuf Sembuf={0,1,0};
+    semop(semid,&Sembuf, 1);
 }
 
 void shm_init(){
     key_t key=ftok(".",0x100);
     shmid=shmget(key,SHMSIZE,IPC_CREAT|0666);
     shmaddr=shmat(shmid,NULL,0);
+
+    stateaddr=shmaddr;
+    ele_task_addr=shmaddr+sizeof(state);
+    floor_task_addr=ele_task_addr+4*sizeof(ele_task);
+
+    ele_task_addr->floor=-1;
+    floor_task_addr->floor=-1;
+
     //printf("%s\n",strerror(errno));
     semid=semget(key,1,IPC_CREAT|0644);
+    semctl(semid,0,SETVAL,1);
     return;
 }
 
