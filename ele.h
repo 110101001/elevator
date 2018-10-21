@@ -2,12 +2,16 @@
 #define ElE_H_
 #include<sys/types.h>
 
+#define ABS(x) ((x)>0?(x):-(x))
+#define VEL 10
+#define TICK_PER_FLOOR 100
 typedef enum{STOP,UP,DOWN} DIR;
-typedef enum{OPEN,CLOSE};
+typedef enum{OPEN,CLOSE} DOOR;
 
 typedef struct state{
     float floor;
     DIR dir;
+    DOOR door;
 }state;
 
 typedef struct floor_task{

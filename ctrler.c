@@ -8,8 +8,6 @@
 
 int self; 
 
-extern byte *shmaddr;
-
 void floor_display_loop(){
     printf("Floor display %d init at pid:%d\n",self,getpid());
     pthread_exit(0);
