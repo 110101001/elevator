@@ -36,9 +36,9 @@ void shm_init(){
     shmid=shmget(key,SHMSIZE,IPC_CREAT|0666);
     shmaddr=shmat(shmid,NULL,0);
 
-    stateaddr=shmaddr;
-    ele_task_addr=shmaddr+sizeof(state);
-    floor_task_addr=ele_task_addr+4*sizeof(ele_task);
+    stateaddr=(state *)shmaddr;
+    ele_task_addr=(ele_task *)(shmaddr+sizeof(state));
+    floor_task_addr=(floor_task *)(ele_task_addr+4*sizeof(ele_task));
 
     ele_task_addr->floor=-1;
     floor_task_addr->floor=-1;

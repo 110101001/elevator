@@ -1,5 +1,6 @@
 #include<unistd.h>
 #include<stdio.h>
+#include<stdlib.h>
 #include"smemory.h"
 #include"ele.h"
 #include"ctrler.h"
@@ -12,15 +13,12 @@ DIR dir=STOP;
 int stage=0;
 
 int schedule(){
-    if(stage==0) return FLOOR2;
-    if(stage==1) return FLOOR1;
-    if(stage==2) return FLOOR3;
-    if(stage==3) return FLOOR2;
-    if(stage==4) exit(0);
+    return FLOOR1;
 }
 
 void ele_arrive(){
-    stage+=1;
+    door=OPEN;
+    exit(0);//做好了把这个删掉
 }
 
 void ele_state_update(){
@@ -60,6 +58,7 @@ void ele_main_loop(){
         target_floor=schedule();
         ele_move();
         ele_state_update();
+        usleep(100);
     }
     //
 }

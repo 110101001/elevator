@@ -31,7 +31,7 @@ void electl_op_loop(){
 int floor_main_loop(int floor){
     pthread_t tid;
     self=floor;
-    pthread_create(&tid,NULL,floor_display_loop,NULL);
+    pthread_create(&tid,NULL,(void * (*)(void *))floor_display_loop,NULL);
     floor_op_loop();
     return 0;
 }
@@ -39,7 +39,7 @@ int floor_main_loop(int floor){
 int electl_main_loop(){
     pthread_t tid;
     self=ELE;
-    pthread_create(&tid,NULL,electl_display_loop,NULL);
+    pthread_create(&tid,NULL,(void * (*)(void *))electl_display_loop,NULL);
     electl_op_loop();
     return 0;
 }
