@@ -8,7 +8,13 @@
 int create_electl_process(){
     int flag;
     if(flag=fork()==0){
-        create_ele_ui();
+        //create_ele_ui();
+        clicked_to(FLOOR2);
+        sleep(1);
+        clicked_to(FLOOR1);
+        sleep(1);
+        clicked_to(FLOOR3);
+        exit(0);
     }
     else if(flag==-1) 
         return -1;
@@ -19,7 +25,8 @@ int create_electl_process(){
 int create_floor_process(int floor){
     int flag;
     if(flag=fork()==0){
-        ui_creat(floor);
+        //ui_creat(floor);
+        exit(0);
     }
     else if(flag==-1) 
         return -1;

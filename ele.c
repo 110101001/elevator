@@ -43,6 +43,7 @@ void Del_task(){
 }
 
 void ele_arrive(){
+    printf("arrive@%d\n",position);
     Del_task();
 }
 
@@ -82,11 +83,13 @@ void ele_move(){
 void ele_main_loop(){
     printf("Ele init at pid:%d\n",getpid());
     ele_state_update();
-    while(1){
+    for(int t=0;t<100;t++){
         target_floor=schedule();
-        ele_move();
-        ele_state_update();
-        usleep(10000);
+        if(target_floor!=-1){
+            ele_move();
+            ele_state_update();
+        }
+        usleep(50000);
     }
     //
 }

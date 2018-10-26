@@ -11,9 +11,8 @@ int main(int argc_,char *argv_[]){
     argv=argv_;
     shm_init();
 
-    shm_test();
-
-   
+    //shm_test();
+    
     create_process();
 
     ele_main_loop();

@@ -7,6 +7,7 @@
 
 
 void create_ele_ui();
+void clicked_to(int floor);
 
 GtkBuilder* ele_builder;
 

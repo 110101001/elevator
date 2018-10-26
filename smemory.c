@@ -39,9 +39,11 @@ void shm_init(){
     stateaddr=(state *)shmaddr;
     ele_task_addr=(ele_task *)(shmaddr+sizeof(state));
     floor_task_addr=(floor_task *)(ele_task_addr+4*sizeof(ele_task));
+    for(int i=0;i<3;i++)
+        (ele_task_addr+i)->floor=-1;
 
-    ele_task_addr->floor=-1;
-    floor_task_addr->floor=-1;
+    for(int i=0;i<4;i++)
+        (floor_task_addr+i)->floor=-1;
 
     //printf("%s\n",strerror(errno));
     semid=semget(key,1,IPC_CREAT|0644);

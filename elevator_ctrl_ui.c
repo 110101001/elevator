@@ -18,10 +18,11 @@ void clicked_to(int floor){
             temp->floor=floor;
             temp->time=time(0);
             shm_write(ele_task_addr+i,temp,sizeof(ele_task));
+            break;
         }
     }
 
-};
+}
     
 
 void ele_print()
