@@ -1,9 +1,8 @@
 #include<unistd.h>
 
-#include"pipe.h"
-#include"ctrler.h"
+#include"ele.h"
 #include"process.h"
-#include"floor_ui.c"
+#include"floor_ui.h"
 #include"elevator_ctrl_ui.h"
 
 int create_electl_process(){

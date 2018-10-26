@@ -5,8 +5,7 @@
 #include"ele.h"
 #include"smemory.h"
 #include"floor_ui.h"
-#include"ctrler.h"
-void set_ele_state();
+#include"process.h"
 
 
 void clicked_to(int floor){};
@@ -16,7 +15,7 @@ void ele_print()
 {
     state out;
     while(1){
-        print_P(time_to_display);
+        P(time_to_display);
         shm_read(shmaddr,(byte*)&out,sizeof(state));
         if(out.dir==DOWN)
         {
@@ -39,7 +38,7 @@ void ele_print()
 void create_ele_ui()
 {
 
-    gtk_init(NULL,NULL);
+    gtk_init(&argc,&argv);
     ele_builder=gtk_builder_new();
     gtk_builder_add_from_file(ele_builder,"in_lift.glade",NULL);
     ele_window=GTK_WIDGET(gtk_builder_get_object(ele_builder,"window"));

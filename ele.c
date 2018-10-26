@@ -8,7 +8,7 @@
 int target_floor=0;
 int position=0;
 DOOR door=CLOSE;
-DIR dir=STOP;
+DIR_ dir=STOP;
 int stage=0;
 
 int schedule(){

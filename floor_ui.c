@@ -6,15 +6,16 @@
 #include"floor_ui.h"
 #include"smemory.h"
 #include"ele.h"
+#include"process.h"
 
 
 void floor_display_loop(int floor)
 {
-    printf("enter onece more\n");
     state ele_state;
     while(1)
     {
-        print_P(time_to_display);
+        P(time_to_display);
+        printf("print onece more\n");
         shm_read(shmaddr,(byte*)&ele_state,sizeof(state));
         if(ele_state.dir==DOWN)
         {
@@ -32,10 +33,9 @@ void floor_display_loop(int floor)
         sprintf(out,"%.1f",ele_state.floor);
         gtk_label_set_text(GTK_LABEL(nowfloor),out);
         gtk_widget_show(nowfloor);
-        sprintf(out,"%.1f",old_floor);
         gtk_label_set_text(GTK_LABEL(floor1_rmntime),out);
         gtk_widget_show(floor1_rmntime);
-        sleep(0.2);
+        usleep(100000);
     }
 }
 
@@ -46,7 +46,7 @@ void floor_display_loop(int floor)
 void ui_creat(int floor)
 {
     floor++;
-    gtk_init(NULL,NULL);
+    gtk_init(&argc,&argv);
 	builder=gtk_builder_new();
 	gtk_builder_add_from_file(builder,"floor.glade",NULL);
 	floor1_window=GTK_WIDGET(gtk_builder_get_object(builder,"floor_1"));
@@ -70,4 +70,3 @@ void ui_creat(int floor)
     pthread_create(&tid,NULL,floor_display_loop,floor);
     gtk_main();
 }
-	

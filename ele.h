@@ -11,18 +11,18 @@
 #define FLOOR3 2
 #define ELE 3
 
-typedef enum{STOP,UP,DOWN} DIR;
+typedef enum{STOP,UP,DOWN} DIR_;
 typedef enum{OPEN,CLOSE} DOOR;
 
 typedef struct state{
     float floor;
-    DIR dir;
+    DIR_ dir;
     DOOR door;
 }state;
 
 typedef struct floor_task{
     int floor;//呼叫电梯的楼层
-    DIR dir;//呼叫者要去的方向
+    DIR_ dir;//呼叫者要去的方向
     time_t time;
 }floor_task;
 

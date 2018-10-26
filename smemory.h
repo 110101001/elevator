@@ -18,7 +18,7 @@ typedef unsigned char byte;
 extern state *stateaddr;
 extern ele_task *ele_task_addr;
 extern floor_task *floor_task_addr;
-
+extern byte *shmaddr;
 void P(int semid);
 void V(int semid);
 

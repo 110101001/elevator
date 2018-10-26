@@ -45,7 +45,7 @@ void shm_init(){
 
     //printf("%s\n",strerror(errno));
     semid=semget(key,1,IPC_CREAT|0644);
-    time_to_display=semget((key_t)"1234",SIGNAL,0666|IPC_CREAT);
+    time_to_display=semget((key_t)"1234",6,0666|IPC_CREAT);
     semctl(semid,0,SETVAL,1);
     semctl(time_to_display,0,SETVAL,1);
     return;

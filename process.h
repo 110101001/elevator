@@ -3,4 +3,8 @@
 
 int create_process();
 
+
+int argc;
+char **argv;
+
 #endif
