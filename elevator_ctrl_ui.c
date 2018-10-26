@@ -36,10 +36,10 @@ void ele_print()
     }
 }
 
-void create_ele_ui(int argc,int **argv)
+void create_ele_ui()
 {
 
-    gtk_init(&argc,&argv);
+    gtk_init(NULL,NULL);
     ele_builder=gtk_builder_new();
     gtk_builder_add_from_file(ele_builder,"in_lift.glade",NULL);
     ele_window=GTK_WIDGET(gtk_builder_get_object(ele_builder,"window"));
