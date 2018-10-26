@@ -11,9 +11,8 @@ DOOR door=CLOSE;
 DIR_ dir=STOP;
 int stage=0;
 
-int schedule(){
-    return FLOOR2;
-}
+
+
 
 void Del_task(){
     if(position%TICK_PER_FLOOR==0){
@@ -44,8 +43,7 @@ void Del_task(){
 }
 
 void ele_arrive(){
-    door=OPEN;
-    exit(0);//做好了把这个删掉
+    Del_task();
 }
 
 void ele_state_update(){

@@ -1,5 +1,6 @@
 #include<unistd.h>
 #include<pthread.h>
+#include<time.h>
 
 #include"elevator_ctrl_ui.h"
 #include"ele.h"
@@ -8,7 +9,19 @@
 #include"process.h"
 
 
-void clicked_to(int floor){};
+void clicked_to(int floor){
+    ele_task *temp;
+    temp=malloc(sizeof(ele_task));
+    for(int i=0;i<4;i++){
+        shm_read(ele_task_addr+i,temp,sizeof(ele_task));
+        if(temp->floor==-1){
+            temp->floor=floor;
+            temp->time=time(0);
+            shm_write(ele_task_addr+i,temp,sizeof(ele_task));
+        }
+    }
+
+};
     
 
 void ele_print()
