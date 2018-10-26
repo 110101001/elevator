@@ -43,10 +43,10 @@ void floor_display_loop(int floor)
 
 
 
-void ui_creat(int floor,int argc,int **argv)
+void ui_creat(int floor)
 {
     floor++;
-    gtk_init(&argc,&argv);
+    gtk_init(NULL,NULL);
 	builder=gtk_builder_new();
 	gtk_builder_add_from_file(builder,"floor.glade",NULL);
 	floor1_window=GTK_WIDGET(gtk_builder_get_object(builder,"floor_1"));
