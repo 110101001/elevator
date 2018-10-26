@@ -9,9 +9,9 @@
 #include"ele.h"
 #include"smemory.h"
 /*
-shm_write(地址（基址变量名叫shmaddr），数据指针，数据长度)；
-shm_read(地址（基址变量名叫shmaddr），数据指针，数据长度)；
-*/
+   shm_write(地址（基址变量名叫shmaddr），数据指针，数据长度)；
+   shm_read(地址（基址变量名叫shmaddr），数据指针，数据长度)；
+   */
 int shmid=0;
 int semid=0;
 byte *shmaddr;
@@ -21,12 +21,12 @@ floor_task *floor_task_addr;
 
 extern int errno;
 
-static void P(int semid){
+void P(int semid){
     struct sembuf Sembuf={0,-1,0};
     semop(semid,&Sembuf, 1);
 }
 
-static void V(int semid){
+void V(int semid){
     struct sembuf Sembuf={0,1,0};
     semop(semid,&Sembuf, 1);
 }
@@ -45,7 +45,9 @@ void shm_init(){
 
     //printf("%s\n",strerror(errno));
     semid=semget(key,1,IPC_CREAT|0644);
+    time_to_display=semget((key_t)"1234",SIGNAL,0666|IPC_CREAT);
     semctl(semid,0,SETVAL,1);
+    semctl(time_to_display,0,SETVAL,1);
     return;
 }
 

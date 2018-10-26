@@ -3,13 +3,13 @@
 #include"pipe.h"
 #include"ctrler.h"
 #include"process.h"
-
-
+#include"floor_ui.c"
+#include"elevator_ctrl_ui.h"
 
 int create_electl_process(){
     int flag;
     if(flag=fork()==0){
-        electl_main_loop();
+        create_ele_ui();
     }
     else if(flag==-1) 
         return -1;
@@ -20,7 +20,7 @@ int create_electl_process(){
 int create_floor_process(int floor){
     int flag;
     if(flag=fork()==0){
-        floor_main_loop(floor);
+        ui_creat(floor);
     }
     else if(flag==-1) 
         return -1;

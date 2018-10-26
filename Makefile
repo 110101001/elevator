@@ -123,33 +123,6 @@ ele/fast:
 	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/build
 .PHONY : ele/fast
 
-ctrler.o: ctrler.c.o
-
-.PHONY : ctrler.o
-
-# target to build an object file
-ctrler.c.o:
-	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/ctrler.c.o
-.PHONY : ctrler.c.o
-
-ctrler.i: ctrler.c.i
-
-.PHONY : ctrler.i
-
-# target to preprocess a source file
-ctrler.c.i:
-	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/ctrler.c.i
-.PHONY : ctrler.c.i
-
-ctrler.s: ctrler.c.s
-
-.PHONY : ctrler.s
-
-# target to generate assembly for a file
-ctrler.c.s:
-	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/ctrler.c.s
-.PHONY : ctrler.c.s
-
 ele.o: ele.c.o
 
 .PHONY : ele.o
@@ -176,6 +149,60 @@ ele.s: ele.c.s
 ele.c.s:
 	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/ele.c.s
 .PHONY : ele.c.s
+
+elevator_ctrl_ui.o: elevator_ctrl_ui.c.o
+
+.PHONY : elevator_ctrl_ui.o
+
+# target to build an object file
+elevator_ctrl_ui.c.o:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/elevator_ctrl_ui.c.o
+.PHONY : elevator_ctrl_ui.c.o
+
+elevator_ctrl_ui.i: elevator_ctrl_ui.c.i
+
+.PHONY : elevator_ctrl_ui.i
+
+# target to preprocess a source file
+elevator_ctrl_ui.c.i:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/elevator_ctrl_ui.c.i
+.PHONY : elevator_ctrl_ui.c.i
+
+elevator_ctrl_ui.s: elevator_ctrl_ui.c.s
+
+.PHONY : elevator_ctrl_ui.s
+
+# target to generate assembly for a file
+elevator_ctrl_ui.c.s:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/elevator_ctrl_ui.c.s
+.PHONY : elevator_ctrl_ui.c.s
+
+floor_ui.o: floor_ui.c.o
+
+.PHONY : floor_ui.o
+
+# target to build an object file
+floor_ui.c.o:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/floor_ui.c.o
+.PHONY : floor_ui.c.o
+
+floor_ui.i: floor_ui.c.i
+
+.PHONY : floor_ui.i
+
+# target to preprocess a source file
+floor_ui.c.i:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/floor_ui.c.i
+.PHONY : floor_ui.c.i
+
+floor_ui.s: floor_ui.c.s
+
+.PHONY : floor_ui.s
+
+# target to generate assembly for a file
+floor_ui.c.s:
+	$(MAKE) -f CMakeFiles/ele.dir/build.make CMakeFiles/ele.dir/floor_ui.c.s
+.PHONY : floor_ui.c.s
 
 main.o: main.c.o
 
@@ -321,12 +348,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ele"
 	@echo "... edit_cache"
-	@echo "... ctrler.o"
-	@echo "... ctrler.i"
-	@echo "... ctrler.s"
 	@echo "... ele.o"
 	@echo "... ele.i"
 	@echo "... ele.s"
+	@echo "... elevator_ctrl_ui.o"
+	@echo "... elevator_ctrl_ui.i"
+	@echo "... elevator_ctrl_ui.s"
+	@echo "... floor_ui.o"
+	@echo "... floor_ui.i"
+	@echo "... floor_ui.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

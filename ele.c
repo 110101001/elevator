@@ -3,7 +3,6 @@
 #include<stdlib.h>
 #include"smemory.h"
 #include"ele.h"
-#include"ctrler.h"
 
 
 int target_floor=0;
@@ -56,6 +55,9 @@ void ele_state_update(){
     stat.door=door;
 
     shm_write(stateaddr,(byte *)&stat ,sizeof(state));
+    for(int i;i<6;i++){
+        V(time_to_display);
+    }
 }
 
 void ele_move(){

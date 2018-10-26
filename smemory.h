@@ -4,6 +4,7 @@
 
 #define SHMSIZE 4*1024
 
+int time_to_display; 
 /*
 struct Sembuf{
     unsigned short num;
@@ -17,6 +18,9 @@ typedef unsigned char byte;
 extern state *stateaddr;
 extern ele_task *ele_task_addr;
 extern floor_task *floor_task_addr;
+
+void P(int semid);
+void V(int semid);
 
 void shm_init();
 
