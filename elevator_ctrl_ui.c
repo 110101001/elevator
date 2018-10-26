@@ -40,11 +40,11 @@ void ele_print()
             gtk_arrow_set(GTK_ARROW(ele_dir),GTK_ARROW_UP,GTK_SHADOW_ETCHED_IN);
         }
         char ch_out[10];
-        sprintf(ch_out,"%.1fF",out.floor);
+        sprintf(ch_out,"%.0fF",out.floor);
         gtk_label_set_text(GTK_LABEL(now_floor),ch_out);
         gtk_widget_show(ele_dir);
         gtk_widget_show(now_floor);
-        sleep(0.2);
+        usleep(100000);
     }
 }
 

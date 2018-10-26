@@ -15,7 +15,6 @@ void floor_display_loop(int floor)
     while(1)
     {
         P(time_to_display);
-        printf("print onece more\n");
         shm_read(shmaddr,(byte*)&ele_state,sizeof(state));
         if(ele_state.dir==DOWN)
         {
@@ -30,7 +29,7 @@ void floor_display_loop(int floor)
             gtk_widget_show(floor1_dir);
         }
         char out[10];
-        sprintf(out,"%.1f",ele_state.floor);
+        sprintf(out,"%.0fF",ele_state.floor);
         gtk_label_set_text(GTK_LABEL(nowfloor),out);
         gtk_widget_show(nowfloor);
         gtk_label_set_text(GTK_LABEL(floor1_rmntime),out);
