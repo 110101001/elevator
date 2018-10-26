@@ -6,7 +6,7 @@
 #include<gtk/gtk.h>
 
 
-void create_ele_ui(int argc,int **argv);
+void create_ele_ui();
 
 GtkBuilder* ele_builder;
 
