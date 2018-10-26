@@ -4,6 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABS	ele.h	5;"	d
 ARCHITECTURE_ID	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	410;"	d	file:
 ARCHITECTURE_ID	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	413;"	d	file:
 ARCHITECTURE_ID	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	416;"	d	file:
@@ -30,7 +31,7 @@ ARCHITECTURE_ID	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	424;"	d	fi
 ARCHITECTURE_ID	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	427;"	d	file:
 ARCHITECTURE_ID	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	430;"	d	file:
 ARCHITECTURE_ID	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	434;"	d	file:
-CLOSE	ele.h	/^typedef enum{OPEN,CLOSE};$/;"	e	enum:__anon2
+CLOSE	ele.h	/^typedef enum{OPEN,CLOSE} DOOR;$/;"	e	enum:__anon2
 CMAKE_BINARY_DIR	Makefile	/^CMAKE_BINARY_DIR = \/home\/wupeicong\/OS\/elevator$/;"	m
 CMAKE_COMMAND	Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
 CMAKE_SOURCE_DIR	Makefile	/^CMAKE_SOURCE_DIR = \/home\/wupeicong\/OS\/elevator$/;"	m
@@ -268,6 +269,7 @@ C_DIALECT	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	531;"	d	file:
 DEC	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	453;"	d	file:
 DEC	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	438;"	d	file:
 DIR	ele.h	/^typedef enum{STOP,UP,DOWN} DIR;$/;"	t	typeref:enum:__anon1
+DOOR	ele.h	/^typedef enum{OPEN,CLOSE} DOOR;$/;"	t	typeref:enum:__anon2
 DOWN	ele.h	/^typedef enum{STOP,UP,DOWN} DIR;$/;"	e	enum:__anon1
 ELE	ctrler.h	7;"	d
 EQUALS	Makefile	/^EQUALS = =$/;"	m
@@ -278,7 +280,7 @@ FLOOR3	ctrler.h	6;"	d
 HEX	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	464;"	d	file:
 HEX	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	449;"	d	file:
 ID_VOID_MAIN	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
-OPEN	ele.h	/^typedef enum{OPEN,CLOSE};$/;"	e	enum:__anon2
+OPEN	ele.h	/^typedef enum{OPEN,CLOSE} DOOR;$/;"	e	enum:__anon2
 P	smemory.c	/^static void P(int semid){$/;"	f	file:
 PIPE_H_	pipe.h	2;"	d
 PLATFORM_ID	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	307;"	d	file:
@@ -346,7 +348,7 @@ PLATFORM_ID	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	384;"	d	file:
 PROCESS_H_	process.h	2;"	d
 RM	Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 SHELL	Makefile	/^SHELL = \/bin\/sh$/;"	m
-SHMSIZE	smemory.h	4;"	d
+SHMSIZE	smemory.h	5;"	d
 SIMULATE_ID	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	163;"	d	file:
 SIMULATE_ID	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	178;"	d	file:
 SIMULATE_ID	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	21;"	d	file:
@@ -372,17 +374,25 @@ STRINGIFY	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	288;"	d	file:
 STRINGIFY_HELPER	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	302;"	d	file:
 STRINGIFY_HELPER	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	287;"	d	file:
 SUFFIXES	Makefile	/^SUFFIXES =$/;"	m
+TICK_PER_FLOOR	ele.h	7;"	d
 UP	ele.h	/^typedef enum{STOP,UP,DOWN} DIR;$/;"	e	enum:__anon1
 V	smemory.c	/^static void V(int semid){$/;"	f	file:
+VEL	ele.h	6;"	d
 byte	pipe.h	/^typedef unsigned char byte;$/;"	t
 byte	smemory.h	/^typedef unsigned char byte;$/;"	t
 const	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
 create_electl_process	process.c	/^int create_electl_process(){$/;"	f
 create_floor_process	process.c	/^int create_floor_process(int floor){$/;"	f
 create_process	process.c	/^int create_process(){$/;"	f
+dir	ele.c	/^DIR dir=STOP;$/;"	v
 dir	ele.h	/^    DIR dir;$/;"	m	struct:state
 dir	ele.h	/^    DIR dir;\/\/呼叫者要去的方向$/;"	m	struct:floor_task
+door	ele.c	/^DOOR door=CLOSE;$/;"	v
+door	ele.h	/^    DOOR door;$/;"	m	struct:state
+ele_arrive	ele.c	/^void ele_arrive(){$/;"	f
 ele_main_loop	ele.c	/^void ele_main_loop(){$/;"	f
+ele_move	ele.c	/^void ele_move(){$/;"	f
+ele_state_update	ele.c	/^void ele_state_update(){$/;"	f
 ele_task	ele.h	/^typedef struct ele_task{$/;"	s
 ele_task	ele.h	/^}ele_task;$/;"	t	typeref:struct:ele_task
 ele_task_addr	smemory.c	/^ele_task *ele_task_addr;$/;"	v
@@ -426,8 +436,10 @@ pipe_fd	pipe.c	/^int pipe_fd[4][2];$/;"	v
 pipe_init	pipe.c	/^int pipe_init(){$/;"	f
 pipe_recv	pipe.c	/^int pipe_recv(int sender,byte *data,int len){$/;"	f
 pipe_send	pipe.c	/^void pipe_send(int sender,byte *data,int len){$/;"	f
+position	ele.c	/^int position=0;$/;"	v
 qnxnto	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
+schedule	ele.c	/^int schedule(){$/;"	f
 self	ctrler.c	/^int self; $/;"	v
 semid	smemory.c	/^int semid=0;$/;"	v
 shm_init	smemory.c	/^void shm_init(){$/;"	f
@@ -436,9 +448,11 @@ shm_test	smemory.c	/^void shm_test(){$/;"	f
 shm_write	smemory.c	/^void shm_write(byte *addr,byte *data,int len){$/;"	f
 shmaddr	smemory.c	/^byte *shmaddr;$/;"	v
 shmid	smemory.c	/^int shmid=0;$/;"	v
+stage	ele.c	/^int stage=0;$/;"	v
 state	ele.h	/^typedef struct state{$/;"	s
 state	ele.h	/^}state;$/;"	t	typeref:struct:state
 stateaddr	smemory.c	/^state *stateaddr;$/;"	v
+target_floor	ele.c	/^int target_floor=0;$/;"	v
 time	ele.h	/^    time_t time;$/;"	m	struct:ele_task
 time	ele.h	/^    time_t time;$/;"	m	struct:floor_task
 volatile	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:

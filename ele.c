@@ -13,7 +13,35 @@ DIR dir=STOP;
 int stage=0;
 
 int schedule(){
-    return FLOOR1;
+    return FLOOR2;
+}
+
+void Del_task(){
+    if(position%TICK_PER_FLOOR==0){
+        int floor=position/TICK_PER_FLOOR;
+        {
+            floor_task* temp;
+            temp=malloc(sizeof(floor_task));
+            for(int i=0;i<4;i++){
+                shm_read(floor_task_addr+i,temp,sizeof(floor_task));
+                if(temp->floor==floor){
+                    temp->floor=-1;
+                    shm_write(floor_task_addr+i,temp,sizeof(floor_task));
+                }
+            }
+        }
+        {
+            ele_task *temp;
+            temp=malloc(sizeof(ele_task));
+            for(int i=0;i<3;i++){
+                shm_read(ele_task_addr+i,temp,sizeof(ele_task));
+                if(temp->floor==floor){
+                    temp->floor=-1;
+                    shm_write(ele_task_addr+i,temp,sizeof(ele_task));
+                }
+            }
+        }
+    }
 }
 
 void ele_arrive(){
@@ -26,7 +54,7 @@ void ele_state_update(){
     stat.floor=(position*1.0)/(TICK_PER_FLOOR*1.0);
     stat.dir=dir;
     stat.door=door;
-    
+
     shm_write(stateaddr,(byte *)&stat ,sizeof(state));
 }
 
@@ -58,7 +86,7 @@ void ele_main_loop(){
         target_floor=schedule();
         ele_move();
         ele_state_update();
-        usleep(100);
+        usleep(10000);
     }
     //
 }

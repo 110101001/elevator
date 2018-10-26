@@ -1,0 +1,9 @@
+syn keyword CTagsStructure ele_task state floor_task
+syn keyword CTagsMember door time dir floor
+syn keyword CTagsGlobalVariable stateaddr shmid target_floor pipe_fd self shmaddr position floor_task_addr stage semid door dir ele_task_addr
+syn keyword CTagsConstant info_platform features info_language_dialect_default info_arch info_simulate info_simulate_version info_compiler qnxnto info_cray info_version
+syn keyword CTagsEnumerationValue OPEN STOP DOWN CLOSE UP
+syn keyword CTagsFunction shm_test create_electl_process V P shm_init ele_move electl_main_loop pipe_send main ele_main_loop shm_read pipe_init ele_arrive floor_display_loop ele_state_update pipe_recv schedule create_process electl_op_loop create_floor_process floor_main_loop floor_op_loop electl_display_loop shm_write
+syn keyword CTagsType floor_task DOOR ele_task DIR byte state
+syn keyword CTagsDefinedName SHMSIZE SIMULATE_VERSION_MINOR FLOOR2 COMPILER_ID PLATFORM_ID CTRLER_H_ SMEMORY_H_ ID_VOID_MAIN ARCHITECTURE_ID COMPILER_VERSION_PATCH PROCESS_H_ COMPILER_VERSION_MINOR SIMULATE_ID ABS volatile SIMULATE_VERSION_MAJOR COMPILER_VERSION_TWEAK TICK_PER_FLOOR VEL ELE C_DIALECT STRINGIFY ElE_H_ DEC FLOOR1 FLOOR3 PIPE_H_ STRINGIFY_HELPER HEX const COMPILER_VERSION_MAJOR
+

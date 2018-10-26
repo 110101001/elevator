@@ -20,9 +20,9 @@ extern floor_task *floor_task_addr;
 
 void shm_init();
 
-void shm_write();
+void shm_write(byte *addr,byte *data,int len);
 
-void shm_read();
+void shm_read(byte *addr,byte *data,int len);
 
 void shm_test();
 
