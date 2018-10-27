@@ -4,8 +4,6 @@
 
 int* schedule(){
 
-
-    printf("enter schedule\n");
     {
         floor_task *temp;
         temp=malloc(sizeof(floor_task));
@@ -23,7 +21,6 @@ int* schedule(){
             {
                 forced_insert_queue(temp->floor);
             }
-            printf("ahgjkk %d\n",temp->floor);
 
 
         }
@@ -43,7 +40,6 @@ int* schedule(){
             if(temp->floor==-1){
                 break;
             }
-            printf("temp->floor%d\n",temp->floor);
             insert_queue(temp->floor);
 
 

@@ -12,7 +12,6 @@
 void clicked_to(GtkWidget* widget,int floor){
     ele_task *temp;
     temp=malloc(sizeof(ele_task));
-    printf("press %d\n",floor);
     for(int i=0;i<3;i++){
         shm_read(ele_task_addr+i,temp,sizeof(ele_task));
         if(temp->floor==floor)

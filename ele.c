@@ -21,7 +21,6 @@ void forced_insert_queue(int value){
 }
 
 void insert_queue(int value){
-    printf("insert %d\n",value);
     if(value>position)
     {
         for(int i=0;i<10;i++)
@@ -106,7 +105,6 @@ void ele_arrive(){
 }
 
 void ele_state_update(int pos,DIR_ dir1,DOOR dor){
-    printf("enter ele_update 0\n");
     state stat;
     stat.floor=pos;
     stat.dir=dir1;
@@ -115,7 +113,6 @@ void ele_state_update(int pos,DIR_ dir1,DOOR dor){
     for(int i=0;i<6;i++){
         V(time_to_display);
     }
-    printf("enter ele_state_update\n");
 }
 
 void ele_move(){
@@ -146,7 +143,7 @@ void ele_main_loop(){
     ele_state_update(1,UP,CLOSE);
     for(int i=0;i<10;i++)
         queue[i]=-1;
-    position=0;
+    position=1;
     sub=0;
     state stat;
     shm_read(stateaddr,(byte *)&stat,sizeof(state));
@@ -157,10 +154,6 @@ void ele_main_loop(){
             shm_read(stateaddr,(byte *)&stat,sizeof(state));
         }
         schedule();
-        for(int i=0;i<10;i++)
-        {
-                printf("%d\n",queue[i]);
-        }
         ele_move();
         usleep(1000000);
     }
