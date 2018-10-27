@@ -34,6 +34,11 @@ void V(int semid){
 void shm_init(){
     key_t key=ftok(".",0x100);
     shmid=shmget(key,SHMSIZE,IPC_CREAT|0666);
+    if(shmid<0)
+    {
+        printf("shm init erro\n");
+        return;
+    }
     shmaddr=shmat(shmid,NULL,0);
 
     stateaddr=(state *)shmaddr;

@@ -34,7 +34,7 @@ void floor_display_loop(int floor)
         gtk_widget_show(nowfloor);
         gtk_label_set_text(GTK_LABEL(floor1_rmntime),out);
         gtk_widget_show(floor1_rmntime);
-        usleep(100000);
+        usleep(200000);
     }
 }
 

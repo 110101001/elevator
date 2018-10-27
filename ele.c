@@ -43,7 +43,6 @@ void Del_task(){
 }
 
 void ele_arrive(){
-    printf("arrive@%d\n",position);
     Del_task();
 }
 
@@ -52,9 +51,8 @@ void ele_state_update(){
     stat.floor=(position*1.0)/(TICK_PER_FLOOR*1.0);
     stat.dir=dir;
     stat.door=door;
-
     shm_write(stateaddr,(byte *)&stat ,sizeof(state));
-    for(int i;i<6;i++){
+    for(int i=0;i<6;i++){
         V(time_to_display);
     }
 }
@@ -81,15 +79,14 @@ void ele_move(){
 }
 
 void ele_main_loop(){
-    printf("Ele init at pid:%d\n",getpid());
     ele_state_update();
-    for(int t=0;t<100;t++){
+    while(1){
         target_floor=schedule();
         if(target_floor!=-1){
             ele_move();
             ele_state_update();
         }
-        usleep(50000);
+        usleep(200000);
     }
     //
 }

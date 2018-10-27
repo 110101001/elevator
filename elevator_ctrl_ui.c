@@ -9,11 +9,14 @@
 #include"process.h"
 
 
-void clicked_to(int floor){
+void clicked_to(GtkWidget* widget,int floor){
     ele_task *temp;
     temp=malloc(sizeof(ele_task));
-    for(int i=0;i<4;i++){
+    printf("press %d\n",floor);
+    for(int i=0;i<3;i++){
         shm_read(ele_task_addr+i,temp,sizeof(ele_task));
+        if(temp->floor==floor)
+        return;
         if(temp->floor==-1){
             temp->floor=floor;
             temp->time=time(0);
@@ -45,7 +48,7 @@ void ele_print()
         gtk_label_set_text(GTK_LABEL(now_floor),ch_out);
         gtk_widget_show(ele_dir);
         gtk_widget_show(now_floor);
-        usleep(100000);
+        usleep(200000);
     }
 }
 
@@ -66,7 +69,9 @@ void create_ele_ui()
     plan=GTK_WIDGET(gtk_builder_get_object(ele_builder,"plan"));
     gtk_builder_connect_signals (ele_builder, NULL);
     gtk_window_set_title(GTK_WINDOW(ele_window), "ELEVATOR");
-    g_signal_connect(GTK_BUTTON(to_1), "clicked", G_CALLBACK(clicked_to), 1);
+    g_signal_connect(GTK_BUTTON(to_1), "clicked", G_CALLBACK(clicked_to),1);
+    g_signal_connect(GTK_BUTTON(to_2),"clicked",G_CALLBACK(clicked_to),2);
+    g_signal_connect(GTK_BUTTON(to_3),"clicked",G_CALLBACK(clicked_to),3);
     gtk_widget_show_all(ele_window);
     pthread_t tid;
     pthread_create(&tid,NULL,ele_print,NULL);
