@@ -1,7 +1,7 @@
 #ifndef ElE_H_
 #define ElE_H_
 #include<sys/types.h>
-
+#include<stdbool.h>
 #define ABS(x) ((x)>0?(x):-(x))
 #define VEL 10
 #define TICK_PER_FLOOR 100
@@ -32,5 +32,22 @@ typedef struct ele_task{
 }ele_task;
 //floor取-1表示队列末尾
 void ele_main_loop();
+
+
+int position;
+
+
+void insert_queue(int value);
+
+
+int pop_queue();
+
+bool search_queue(int value);
+
+int queue[10];
+int sub;
+
+
+void forced_insert_queue(int value);
 
 #endif

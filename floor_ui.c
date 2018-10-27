@@ -41,6 +41,53 @@ void floor_display_loop(int floor)
 
 
 
+void GOTO_UP(GtkWidget* widget,int floor){
+    floor_task *temp;
+    temp=malloc(sizeof(floor_task));
+    for(int i=0;i<4;i++)
+    {
+        shm_read(floor_task_addr,temp,sizeof(floor_task));
+        if(temp->floor==-1)
+        {
+            temp->floor=floor;
+            temp->dir=UP;
+
+            shm_write(floor_task_addr,temp,sizeof(floor_task));
+            break;
+        }
+    }
+        
+        
+
+
+}
+
+
+void GOTO_DOWN(GtkWidget* widget,int floor)
+ {
+    floor_task *temp;
+    temp=malloc(sizeof(floor_task));
+    for(int i=0;i<4;i++)
+    {
+        shm_read(floor_task_addr,temp,sizeof(floor_task));
+        if(temp->floor==-1)
+        {
+            temp->floor=floor;
+            temp->dir=DOWN;
+
+            shm_write(floor_task_addr,temp,sizeof(floor_task));
+            break;
+        }
+    }
+        
+        
+
+
+}
+               
+
+
+
 
 void ui_creat(int floor)
 {
@@ -56,7 +103,8 @@ void ui_creat(int floor)
  	nowfloor=GTK_WIDGET(gtk_builder_get_object(builder,"nowfloor"));
  	gtk_builder_connect_signals (builder, NULL);
     nowfloor=GTK_WIDGET(gtk_builder_get_object(builder,"nowfloor"));
-
+    g_signal_connect(GTK_BUTTON(floor1_up),"clicked",G_CALLBACK(GOTO_UP),floor);
+    g_signal_connect(GTK_BUTTON(floor1_down),"clicked",G_CALLBACK(GOTO_DOWN),floor);
     if(floor==1)
         gtk_window_set_title(GTK_WINDOW(floor1_window), "FLOOR  1");
     else if(floor==2)

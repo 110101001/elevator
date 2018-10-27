@@ -1,15 +1,74 @@
 #include<unistd.h>
 #include<stdio.h>
 #include<stdlib.h>
+
 #include"smemory.h"
 #include"ele.h"
+#include"schedule.h"
 
 
-int target_floor=0;
-int position=0;
+#define close 0
+#define open 1
+
 DOOR door=CLOSE;
 DIR_ dir=STOP;
 int stage=0;
+
+void forced_insert_queue(int value){
+    queue[sub]=value;
+    sub++;
+
+}
+
+void insert_queue(int value){
+    printf("insert %d\n",value);
+    if(value>position)
+    {
+        for(int i=0;i<10;i++)
+        {
+            if(queue[i]==-1&&i!=0)
+                break;
+            if(value>queue[i]||queue[0]==-1)
+            {
+                queue[sub]=value;
+                sub++;
+                break;
+            }
+        }
+    }
+    else if(value<position)
+    {
+        for(int i=0;i<10;i++)
+        {
+            if(queue[i]==-1&&i!=0)
+                break;
+            if(value<queue[i]||queue[0]==-1)
+            {
+                queue[sub]=value;
+                sub++;
+                break;
+            }
+        }
+    }
+
+}
+
+int pop_queue(){
+    int ret=queue[0];
+    for(int i=0;i<9;i++)
+        queue[i]=queue[i+1];
+    sub--;
+    return ret;
+}
+
+bool search_queue(int value){
+    for(int i=0;i<10;i++)
+        if(queue[i]==value)
+            return true;
+    return false;
+}
+
+
 
 
 
@@ -46,47 +105,64 @@ void ele_arrive(){
     Del_task();
 }
 
-void ele_state_update(){
+void ele_state_update(int pos,DIR_ dir1,DOOR dor){
+    printf("enter ele_update 0\n");
     state stat;
-    stat.floor=(position*1.0)/(TICK_PER_FLOOR*1.0);
-    stat.dir=dir;
-    stat.door=door;
+    stat.floor=pos;
+    stat.dir=dir1;
+    stat.door=dor;
     shm_write(stateaddr,(byte *)&stat ,sizeof(state));
     for(int i=0;i<6;i++){
         V(time_to_display);
     }
+    printf("enter ele_state_update\n");
 }
 
 void ele_move(){
-    int target_postion=target_floor*TICK_PER_FLOOR;
-    if(target_postion!=position){
-        if(target_postion>position){
-            dir=UP;
-        }
-        else{
-            dir=DOWN;
-        }
-        if(door==CLOSE){
-            if(ABS(target_postion-position)<=VEL){
-                position=target_postion;
-                ele_arrive();
-            }
-            else{//ABS(target_postion-position)>100
-                position+=(dir==UP)*VEL-(dir==DOWN)*VEL;
-            }
-        }
+    while(1){
+
+        if(queue[0]==-1)
+            break;
+        while(1){
+        if(queue[0]<position)
+            ele_state_update(position,DOWN,CLOSE);
+        else
+            ele_state_update(position,UP,CLOSE);
+        if(queue[0]==position)
+            break;
+        if(queue[0]-position>0)
+            position++;
+        else 
+            position--;
+        sleep(2);
     }
+    position=queue[0];
+    pop_queue();
+    }
+    
 }
 
 void ele_main_loop(){
-    ele_state_update();
+    ele_state_update(1,UP,CLOSE);
+    for(int i=0;i<10;i++)
+        queue[i]=-1;
+    position=0;
+    sub=0;
+    state stat;
+    shm_read(stateaddr,(byte *)&stat,sizeof(state));
     while(1){
-        target_floor=schedule();
-        if(target_floor!=-1){
-            ele_move();
-            ele_state_update();
+        while(stat.door==OPEN)
+        {
+            usleep(100000);
+            shm_read(stateaddr,(byte *)&stat,sizeof(state));
         }
-        usleep(200000);
+        schedule();
+        for(int i=0;i<10;i++)
+        {
+                printf("%d\n",queue[i]);
+        }
+        ele_move();
+        usleep(1000000);
     }
     //
 }
