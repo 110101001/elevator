@@ -28,6 +28,11 @@ void floor_display_loop(int floor)
             gtk_arrow_set(GTK_ARROW(floor1_dir),GTK_ARROW_UP,GTK_SHADOW_ETCHED_IN);
             gtk_widget_show(floor1_dir);
         }
+        else if(ele_state.dir==STOP)
+        {
+            gtk_arrow_set(GTK_ARROW(floor1_dir),GTK_ARROW_RIGHT,GTK_SHADOW_ETCHED_IN);
+            gtk_widget_show(floor1_dir);
+        }
         char out[10];
         sprintf(out,"%.0fF",ele_state.floor);
         gtk_label_set_text(GTK_LABEL(nowfloor),out);

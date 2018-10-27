@@ -102,6 +102,7 @@ void Del_task(){
 
 void ele_arrive(){
     Del_task();
+    dir=STOP;
 }
 
 void ele_state_update(int pos,DIR_ dir1,DOOR dor){

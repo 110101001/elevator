@@ -21,36 +21,25 @@ int* schedule(){
             {
                 forced_insert_queue(temp->floor);
             }
-
-
+            temp->floor=-1;
+            for(int i=0;i<4;i++)
+                shm_write(floor_task_addr+i,temp,sizeof(floor_task));
         }
-        temp->floor=-1;
-        for(int i=0;i<4;i++)
-            shm_write(floor_task_addr+i,temp,sizeof(floor_task));
-    
-
-
-    }
-    {
-        ele_task *temp;
-        temp=malloc(sizeof(ele_task));
-        temp->time=-1;
-        for(int i=0;i<3;i++){
-            shm_read(ele_task_addr+i,temp,sizeof(ele_task));
-            if(temp->floor==-1){
-                break;
+        {
+            ele_task *temp;
+            temp=malloc(sizeof(ele_task));
+            temp->time=-1;
+            for(int i=0;i<3;i++){
+                shm_read(ele_task_addr+i,temp,sizeof(ele_task));
+                if(temp->floor==-1){
+                    break;
+                }
+                insert_queue(temp->floor);
             }
-            insert_queue(temp->floor);
-
-
-
-
+            temp->floor=-1;
+            for(int i=0;i<4;i++)
+                shm_write(ele_task_addr+i,temp,sizeof(ele_task));
         }
-
-        temp->floor=-1;
-        for(int i=0;i<4;i++)
-        shm_write(ele_task_addr+i,temp,sizeof(ele_task));
-
+        return queue;
     }
-    return queue;
 }
